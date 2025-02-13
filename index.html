@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-commerce Store</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+    <!-- -----Navbar ----- -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="/" class="logo">
+                    <img src="images/logo/eweb_logo.png" alt="eWeb Logo" width="120" height="40">
+                </a>
+                <ul class="nav-menu">
+                    <li><a href="/" class="nav-link active">Home</a></li>
+                    <li><a href="/product" class="nav-link">Shop</a></li>
+                    <li>
+                        <a href="/features" class="nav-link">
+                            Features
+                        </a>
+                    </li>
+                    <li><a href="blog.html" class="nav-link">Blog</a></li>
+                    <li><a href="/about" class="nav-link">About</a></li>
+                    <li><a href="/contact" class="nav-link">Contact</a></li>
+                </ul>
+                <div class="nav-icons">
+                    <button class="icon-btn" aria-label="Search">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+                    </button>
+                    <button class="icon-btn" aria-label="Cart">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="21" r="1"/><circle cx="19" cy="21" r="1"/><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"/></svg>
+                    </button>
+                    <button class="icon-btn" aria-label="Favorites">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+                    </button>
+                    <a href="login.html" class="login-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                        Login
+                    </a>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <!-- -----Navbar Ends----- -->
+
+
+<!-- -----Banner----- -->
+<section class="hero">
+    <div class="slider-container">
+        <div class="slider">
+            <div class="slide">
+                <div class="hero-content">
+                    <h1 class="hero-title">Discover Amazing Deals</h1>
+                    <p class="hero-subtitle">Shop the latest trends with unbeatable prices</p>
+                    <a href="#shop-now" class="cta-button">Shop Now</a>
+                </div>
+                <div class="hero-image">
+                    <img src="images/banner/banner1.jpg" alt="Shopping bags">
+                </div>
+            </div>
+            <div class="slide">
+                <div class="hero-content">
+                    <h1 class="hero-title">Exclusive Collections</h1>
+                    <p class="hero-subtitle">Find your unique style from our curated selections</p>
+                    <a href="#explore" class="cta-button">Explore Now</a>
+                </div>
+                <div class="hero-image">
+                    <img src="images/banner/banner2.jpg" alt="Exclusive fashion">
+                </div>
+            </div>
+            <div class="slide">
+                <div class="hero-content">
+                    <h1 class="hero-title">Summer Sale</h1>
+                    <p class="hero-subtitle">Get up to 50% off on summer essentials</p>
+                    <a href="#sale" class="cta-button">View Offers</a>
+                </div>
+                <div class="hero-image">
+                    <img src="images/banner/banner3.jpg" alt="Exclusive fashion">
+                </div>
+            </div>
+        </div>
+        <button class="slider-nav prev" aria-label="Previous slide">&lt;</button>
+        <button class="slider-nav next" aria-label="Next slide">&gt;</button>
+        <div class="slider-dots"></div>
+    </div>
+</section>
+
+<section class="second">
+<div class="scr-container">
+    <!-- Top Features Section -->
+    <div class="scr-features">
+        <div class="scr-feature">
+            <i class="fas fa-truck icon"></i>
+            <div>
+                <h3>FREE SHIPPING</h3>
+                <p>On All Orders</p>
+            </div>
+        </div>
+        <div class="scr-feature">
+            <i class="fas fa-headset icon"></i>
+            <div>
+                <h3>24/7 SUPPORT</h3>
+                <p>Get Help When You Need</p>
+            </div>
+        </div>
+        <div class="scr-feature">
+            <i class="fas fa-thumbs-up icon"></i>
+            <div>
+                <h3>100% RETURN</h3>
+                <p>Within 30 Days</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Product Collections Section -->
+    <div class="scr-product-grid">
+        <div class="scr-product">
+            <img src="https://storage.googleapis.com/a1aa/image/0am2XWGqgNu71O8CpDsS_9euU5AxNVU7E5BNzS7vbbc.jpg" alt="Women Collection">
+            <div class="scr-product-info">
+                <h3>SUMMER</h3>
+                <p>Women Collection</p>
+            </div>
+        </div>
+        <div class="scr-product">
+            <img src="https://storage.googleapis.com/a1aa/image/2zYQ17jMC7p9fEtDua2B0Q7SobiGFiAUExujwlLHdxc.jpg" alt="Backpack Collection">
+            <div class="scr-product-info">
+                <h3>BACKPACK</h3>
+                <p>Collection</p>
+            </div>
+        </div>
+        <div class="scr-product">
+            <img src="https://storage.googleapis.com/a1aa/image/crGh5ZCKM8aGncFe0izxmdTjskR1DOAP-W-AczVksm4.jpg" alt="Men's Collection">
+            <div class="scr-product-info">
+                <h3>SPRING</h3>
+                <p>Men's Collection</p>
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+
+
+<section class="collection-hero">
+<main class="collection-container">
+    <header class="collection-header">
+        <h1>Premium Collection</h1>
+        <p>Discover our curated selection of high-quality apparel</p>
+    </header>
+    
+    <div class="filters-and-sort">
+        <div class="filters">
+            <select id="category-filter" class="filter-select">
+                <option value="all">All Categories</option>
+                <option value="shirts">Shirts</option>
+                <option value="pants">Pants</option>
+                <option value="dresses">Dresses</option>
+            </select>
+            <select id="size-filter" class="filter-select">
+                <option value="all">All Sizes</option>
+                <option value="s">S</option>
+                <option value="m">M</option>
+                <option value="l">L</option>
+                <option value="xl">XL</option>
+            </select>
+        </div>
+        <div class="sort">
+            <select id="sort-options" class="filter-select">
+                <option value="default">Featured</option>
+                <option value="price-low-high">Price: Low to High</option>
+                <option value="price-high-low">Price: High to Low</option>
+            </select>
+        </div>
+    </div>
+        <!-- Product items will be dynamically inserted here -->
+        <div class="container">
+            <div class="product-grid">
+                <!-- Product Card 1 -->
+                <div class="product-card">
+                    <div class="product-image-container">
+                        <img src="images/collection/collection1.jpg" alt="Premium Cotton T-Shirt">
+                        <div class="quick-view-overlay">
+                            <button class="quick-view-button">Quick View</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h2>Premium Suit for Women</h2>
+                        <p class="sizes">Sizes: S, M, L, XL</p>
+                        <div class="price-heart">
+                            <span class="price">$29.99</span>
+                            <button class="heart-button">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+                            </button>
+                        </div>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+
+                <!-- Product Card 2 -->
+                <div class="product-card">
+                    <div class="product-image-container">
+                        <img src="images/collection/collection2.jpg" alt="Slim Fit Denim Jeans">
+                        <div class="quick-view-overlay">
+                            <button class="quick-view-button">Quick View</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h2>Slim Fit Denim Jeans</h2>
+                        <p class="sizes">Sizes: 28, 30, 32, 34</p>
+                        <div class="price-heart">
+                            <span class="price">$79.99</span>
+                            <button class="heart-button">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+                            </button>
+                        </div>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+
+                <!-- Product Card 3 -->
+                <div class="product-card">
+                    <div class="product-image-container">
+                        <img src="images/collection/collection3.jpg" alt="Classic Pullover Hoodie">
+                        <div class="quick-view-overlay">
+                            <button class="quick-view-button">Quick View</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h2>Classic Shoes</h2>
+                        <p class="sizes">Sizes: M, L, XL</p>
+                        <div class="price-heart">
+                            <span class="price">$59.99</span>
+                            <button class="heart-button">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+                            </button>
+                        </div>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+
+                <!-- Product Card 4 -->
+                <div class="product-card">
+                    <div class="product-image-container">
+                        <img src="images/collection/collection4.jpg" alt="Winter Down Jacket">
+                        <div class="quick-view-overlay">
+                            <button class="quick-view-button">Quick View</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h2>Premium Cotton Shirt</h2>
+                        <p class="sizes">Sizes: S, M, L</p>
+                        <div class="price-heart">
+                            <span class="price">$149.99</span>
+                            <button class="heart-button">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+                            </button>
+                        </div>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image-container">
+                        <img src="images/collection/collection5.jpg" alt="Premium Cotton T-Shirt">
+                        <div class="quick-view-overlay">
+                            <button class="quick-view-button">Quick View</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h2>Premium Suit For Women</h2>
+                        <p class="sizes">Sizes: S, M, L, XL</p>
+                        <div class="price-heart">
+                            <span class="price">$29.99</span>
+                            <button class="heart-button">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+                            </button>
+                        </div>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image-container">
+                        <img src="images/collection/collection6.jpg" alt="Premium Cotton T-Shirt">
+                        <div class="quick-view-overlay">
+                            <button class="quick-view-button">Quick View</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h2>Premium Cotton T-Shirt</h2>
+                        <p class="sizes">Sizes: S, M, L, XL</p>
+                        <div class="price-heart">
+                            <span class="price">$29.99</span>
+                            <button class="heart-button">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+                            </button>
+                        </div>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image-container">
+                        <img src="images/collection/colllection7.jpg" alt="Premium Cotton T-Shirt">
+                        <div class="quick-view-overlay">
+                            <button class="quick-view-button">Quick View</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h2>Premium Suit For Men</h2>
+                        <p class="sizes">Sizes: S, M, L, XL</p>
+                        <div class="price-heart">
+                            <span class="price">$29.99</span>
+                            <button class="heart-button">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+                            </button>
+                        </div>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image-container">
+                        <img src="images/collection/collection8.jpg" alt="Premium Cotton T-Shirt">
+                        <div class="quick-view-overlay">
+                            <button class="quick-view-button">Quick View</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h2>Premium Jeans</h2>
+                        <p class="sizes">Sizes: S, M, L, XL</p>
+                        <div class="price-heart">
+                            <span class="price">$29.99</span>
+                            <button class="heart-button">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+                            </button>
+                        </div>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</main>
+</section>
+
+<footer class="footer">
+    <div class="footer-container">
+        <!-- About Us -->
+        <div class="footer-section">
+            <h3>About Us</h3>
+            <p>Your go-to store for the latest trends and best deals.</p>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-section">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Shop</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+
+        <!-- Customer Service -->
+        <div class="footer-section">
+            <h3>Customer Service</h3>
+            <ul>
+                <li><a href="#">FAQs</a></li>
+                <li><a href="#">Shipping & Returns</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms & Conditions</a></li>
+            </ul>
+        </div>
+
+        <!-- Subscribe Section -->
+        <div class="footer-section subscribe">
+            <h3>Subscribe to Our Newsletter</h3>
+            <p>Get updates on new arrivals and special offers.</p>
+            <form class="subscribe-form">
+                <input type="email" placeholder="Enter your email" required>
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Social Media -->
+    <div class="social-media">
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+    </div>
+    <!-- Copyright Section -->
+</footer>
+    <footer class="footer-buttom">
+
+        <div class="buttom-footercontainer">
+            <div class="copyright">
+                &copy; 2025 Aakash Subedi. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+
+
+
+
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>
+
