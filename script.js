@@ -4,64 +4,64 @@ document.addEventListener("DOMContentLoaded", () => {
     const nextBtn = document.querySelector(".next")
     const slides = document.querySelectorAll(".slide")
     const dotsContainer = document.querySelector(".slider-dots")
-  
+
     let currentSlide = 0
-  
+
     // Create dots
     slides.forEach((_, index) => {
-      const dot = document.createElement("div")
-      dot.classList.add("dot")
-      if (index === 0) dot.classList.add("active")
-      dot.addEventListener("click", () => goToSlide(index))
-      dotsContainer.appendChild(dot)
+        const dot = document.createElement("div")
+        dot.classList.add("dot")
+        if (index === 0) dot.classList.add("active")
+        dot.addEventListener("click", () => goToSlide(index))
+        dotsContainer.appendChild(dot)
     })
-  
+
     const dots = document.querySelectorAll(".dot")
-  
+
     function goToSlide(n) {
-      slider.style.transform = `translateX(-${n * 33.333}%)`
-      currentSlide = n
-      updateDots()
+        slider.style.transform = `translateX(-${n * 33.333}%)`
+        currentSlide = n
+        updateDots()
     }
-  
+
     function updateDots() {
-      dots.forEach((dot, index) => {
-        dot.classList.toggle("active", index === currentSlide)
-      })
+        dots.forEach((dot, index) => {
+            dot.classList.toggle("active", index === currentSlide)
+        })
     }
-  
+
     prevBtn.addEventListener("click", () => {
-      currentSlide = (currentSlide - 1 + slides.length) % slides.length
-      goToSlide(currentSlide)
+        currentSlide = (currentSlide - 1 + slides.length) % slides.length
+        goToSlide(currentSlide)
     })
-  
+
     nextBtn.addEventListener("click", () => {
-      currentSlide = (currentSlide + 1) % slides.length
-      goToSlide(currentSlide)
+        currentSlide = (currentSlide + 1) % slides.length
+        goToSlide(currentSlide)
     })
-  
+
     // Auto-slide every 5 seconds
     setInterval(() => {
-      currentSlide = (currentSlide + 1) % slides.length
-      goToSlide(currentSlide)
+        currentSlide = (currentSlide + 1) % slides.length
+        goToSlide(currentSlide)
     }, 5000)
-  
+
     // Parallax effect on images
     slides.forEach((slide) => {
-      const image = slide.querySelector(".hero-image")
-  
-      slide.addEventListener("mousemove", (e) => {
-        const mouseX = e.clientX / window.innerWidth - 0.5
-        const mouseY = e.clientY / window.innerHeight - 0.5
-  
-        image.style.transform = `translateX(${mouseX * 20}px) translateY(${mouseY * 20}px)`
-      })
+        const image = slide.querySelector(".hero-image")
+
+        slide.addEventListener("mousemove", (e) => {
+            const mouseX = e.clientX / window.innerWidth - 0.5
+            const mouseY = e.clientY / window.innerHeight - 0.5
+
+            image.style.transform = `translateX(${mouseX * 20}px) translateY(${mouseY * 20}px)`
+        })
     })
-  })
-  
+})
+
 
 //   -----Collection-----
-  document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', () => {
     const productGrid = document.getElementById('product-grid');
     const categoryFilter = document.getElementById('category-filter');
     const sizeFilter = document.getElementById('size-filter');

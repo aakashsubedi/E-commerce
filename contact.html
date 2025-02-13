@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .contact {
+            font-family: 'Roboto', sans-serif;
+            background-color: #bfdbfe;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        .contact {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .contact-container {
+            display: flex;
+            max-width: 1100px;
+            width: 100%;
+            justify-content: space-between;
+            align-items: center;
+            animation: slideUp 1.2s ease-out;
+        }
+
+        @keyframes slideUp {
+            from {
+                transform: translateY(50px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .left {
+            flex: 1;
+        }
+
+        .left h1 {
+            font-size: 48px;
+            font-weight: 400;
+            margin: 0;
+        }
+
+        .left h1.bold {
+            font-weight: 700;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-icons a {
+            border: 2px solid #000;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            text-decoration: none;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .social-icons a:hover {
+            background-color: #000;
+            color: #fff;
+            transform: scale(1.1);
+        }
+
+        .email {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: 600;
+            text-decoration: underline;
+            animation: fadeIn 2s ease-in;
+        }
+
+        .right {
+            flex: 1;
+            text-align: right;
+            animation: slideRight 1.5s ease-in-out;
+        }
+
+        @keyframes slideRight {
+            from {
+                transform: translateX(50px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        .right p {
+            font-size: 22px;
+            font-weight: 600;
+        }
+
+        @media (max-width: 768px) {
+            .contact-container {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .right {
+                text-align: center;
+                margin-top: 20px;
+            }
+        }
+
+        .second-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 32px 16px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 32px;
+            text-align: center;
+        }
+
+        @media (min-width: 768px) {
+            .grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+
+        .icon {
+            font-size: 24px;
+            margin-bottom: 24px;
+        }
+
+        h2 {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 16px;
+        }
+
+        p {
+            margin: 0;
+        }
+
+
+
+
+        /* Contact Section */
+        .c-container {
+            background-color: #CCE7FF;
+            padding: 6rem;
+            border-radius: 2.5rem;
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            width: 100%;
+            margin: 0 auto;
+            margin-top: 40px;
+            margin-bottom: 40px;
+        }
+
+        .c-container h2 {
+            text-align: center;
+            color: #4b5563;
+            margin-bottom: 1rem;
+        }
+
+        .c-container h1 {
+            text-align: center;
+            font-size: 2rem;
+            font-weight: bold;
+            color: #2563eb;
+            margin-bottom: 0.5rem;
+        }
+
+        .c-container p {
+            text-align: center;
+            color: #6b7280;
+            margin-bottom: 1.5rem;
+        }
+
+        .c-container form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .c-container form .input-group {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .c-container form input,
+        .c-container form textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #d1d5db;
+            border-radius: 1.375rem;
+            outline: none;
+            transition: border-color 0.3s;
+        }
+
+        .c-container form input:focus,
+        .c-container form textarea:focus {
+            border-color: #2563eb;
+        }
+
+        .c-container form textarea {
+            resize: none;
+            height: 150px;
+        }
+
+        .c-container form button {
+            padding: 0.75rem;
+            background: linear-gradient(to right, #7c3aed, #2563eb);
+            color: #ffffff;
+            border: none;
+            border-radius: 0.375rem;
+            font-weight: bold;
+            font-size: large;
+            cursor: pointer;
+            transition: background 0.3s;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        .c-container form button:hover {
+            background: linear-gradient(to right, #6d28d9, #1d4ed8);
+        }
+
+        .c-container .info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 1.5rem;
+            color: #6b7280;
+        }
+
+        .c-container .info div {
+            text-align: center;
+        }
+
+        .c-container .info div p {
+            margin: 0.25rem 0;
+        }
+
+        .c-container .info div p:first-child {
+            font-weight: 600;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- -----Navbar ----- -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="/" class="logo">
+                    <img src="images/logo/eweb_logo.png" alt="eWeb Logo" width="120" height="40">
+                </a>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link active">Home</a></li>
+                    <li><a href="product.html" class="nav-link">Shop</a></li>
+                    <li>
+                        <a href="feature.html" class="nav-link">
+                            Features
+                        </a>
+                    </li>
+                    <li><a href="blog.html" class="nav-link">Blog</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+                <div class="nav-icons">
+                    <button class="icon-btn" aria-label="Search">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="11" cy="11" r="8" />
+                            <path d="m21 21-4.3-4.3" />
+                        </svg>
+                    </button>
+                    <button class="icon-btn" aria-label="Cart">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="8" cy="21" r="1" />
+                            <circle cx="19" cy="21" r="1" />
+                            <path
+                                d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12" />
+                        </svg>
+                    </button>
+                    <button class="icon-btn" aria-label="Favorites">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path
+                                d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" />
+                        </svg>
+                    </button>
+                    <a href="login.html" class="login-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" />
+                            <circle cx="12" cy="7" r="4" />
+                        </svg>
+                        Login
+                    </a>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <!-- -----Navbar Ends----- -->
+
+    <!-- -----FirstPAge----- -->
+    <section class="contact">
+        <div class="contact-container">
+            <div class="left">
+                <h1>WANT TO</h1>
+                <h1 class="bold">SAY HELLO?</h1>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/aakashsubedi11"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.linkedin.com/in/aakashsubedi/"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://www.instagram.com/aakashsubedi_/"><i class="fab fa-instagram"></i></a>
+                    <a href="https://github.com/aakashsubedi"><i class="fab fa-github"></i></a>
+                </div>
+                <p class="email">aakkashsubedi@gmail.com</p>
+            </div>
+            <div class="right">
+                <p>It’s time to Get Attached Now.</p>
+                <p style="margin-top: 50px;"> Scroll Down For More <i class="fa-solid fa-arrow-down"></i></p>
+
+            </div>
+        </div>
+    </section>
+    <!-- -----FirstPAge Ends----- -->
+
+    <!-- -----Second Page----- -->
+    <div class="second-container">
+        <div class="grid">
+            <!-- Address Section -->
+            <div>
+                <i class="fas fa-map-marker-alt icon"></i>
+                <h2>OUR ADDRESS</h2>
+                <p>Bharatpur-12<br>Chitwan<br>Nepal</p>
+            </div>
+            <!-- Phones Section -->
+            <div>
+                <i class="fas fa-headset icon"></i>
+                <h2>OUR PHONES</h2>
+                <p>Phone: +977 9804231198<br>Mobile: +977 9804231198</p>
+            </div>
+            <!-- Working Hours Section -->
+            <div>
+                <i class="fas fa-clock icon"></i>
+                <h2>WORKING HOURS</h2>
+                <p>Monday-Friday: 09:00 – 05:00<br>Saturday: 11:00 – 02:00<br>Sunday: Break</p>
+            </div>
+            <!-- Email Address Section -->
+            <div>
+                <i class="fas fa-envelope icon"></i>
+                <h2>E-MAIL ADDRESS</h2>
+                <p>aakkashsubedi@gmail.com</p>
+            </div>
+        </div>
+    </div>
+    <!-- -----Second Page Ends----- -->
+
+
+    <section class="contact">
+        <div class="c-container">
+            <h2>Ready to Start?</h2>
+            <h1>Get in Touch</h1>
+            <p>Let's us know what's your question</p>
+            <form>
+                <div class="input-group">
+                    <input placeholder="Name" type="text" required>
+                    <input placeholder="Email" type="email" required>
+                </div>
+                <textarea placeholder="Tell me about your project..." required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+            <div class="info">
+                <div>
+                    <p>Email</p>
+                    <p>aakkashsubedi@gmail.com</p>
+                </div>
+                <div>
+                    <p>Location</p>
+                    <p>Worldwide</p>
+                </div>
+                <div>
+                    <p>Response Time</p>
+                    <p>2-8 hours</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <footer class="footer">
+        <div class="footer-container">
+            <!-- About Us -->
+            <div class="footer-section">
+                <h3>About Us</h3>
+                <p>Aaksh Store is a one-stop shop for high-quality, stylish, and affordable products. Whether you're
+                    looking for the latest trends or everyday essentials, your store ensures satisfaction with premium
+                    selections and hassle-free returns. </p>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- Customer Service -->
+            <div class="footer-section">
+                <h3>Customer Service</h3>
+                <ul>
+                    <li><a href="#">FAQs</a></li>
+                    <li><a href="#">Shipping & Returns</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                </ul>
+            </div>
+
+            <!-- Subscribe Section -->
+            <div class="footer-section subscribe">
+                <h3>Subscribe to Our Newsletter</h3>
+                <p>Get updates on new arrivals and special offers.</p>
+                <form class="subscribe-form">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Social Media -->
+        <div class="social-media">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-github"></i></a>
+        </div>
+        <!-- Copyright Section -->
+    </footer>
+    <footer class="footer-buttom">
+
+        <div class="buttom-footercontainer">
+            <div class="copyright">
+                &copy; 2025 Aakash Subedi. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+
+
+
+
+</body>
+
+</html>

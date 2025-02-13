@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .section {
+            padding: 50px 20px;
+        }
+
+        .section h2 {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .underline {
+            width: 100px;
+            height: 4px;
+            background-color: black;
+            margin: 0 auto 30px;
+        }
+
+        .box-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .box {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            text-align: center;
+        }
+
+        .icon {
+            font-size: 40px;
+            margin-bottom: 15px;
+        }
+
+        .box h3 {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .box p {
+            color: #4b5563;
+            font-size: 14px;
+        }
+
+
+        /* About Section */
+        .about-section {
+            padding: 50px 20px;
+            max-width: 100%;
+            margin: 0 auto;
+            line-height: 1.6;
+            background-color: #cce7ff;
+        }
+
+        .about-container {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        .about-image {
+            flex: 1;
+            max-width: 400px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            margin-left: 20%;
+        }
+
+        .about-image:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .about-image img {
+            display: block;
+        }
+
+        .about-content {
+            flex: 2;
+        }
+
+        .about-content h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .about-content p {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+            color: #555;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: #ff6f61;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background-color: #e65a50;
+            transform: translateY(-3px);
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- -----Navbar ----- -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="/" class="logo">
+                    <img src="images/logo/eweb_logo.png" alt="eWeb Logo" width="120" height="40">
+                </a>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link active">Home</a></li>
+                    <li><a href="product.html" class="nav-link">Shop</a></li>
+                    <li>
+                        <a href="feature.html" class="nav-link">
+                            Features
+                        </a>
+                    </li>
+                    <li><a href="blog.html" class="nav-link">Blog</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+                <div class="nav-icons">
+                    <button class="icon-btn" aria-label="Search">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="11" cy="11" r="8" />
+                            <path d="m21 21-4.3-4.3" />
+                        </svg>
+                    </button>
+                    <button class="icon-btn" aria-label="Cart">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="8" cy="21" r="1" />
+                            <circle cx="19" cy="21" r="1" />
+                            <path
+                                d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12" />
+                        </svg>
+                    </button>
+                    <button class="icon-btn" aria-label="Favorites">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path
+                                d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" />
+                        </svg>
+                    </button>
+                    <a href="login.html" class="login-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" />
+                            <circle cx="12" cy="7" r="4" />
+                        </svg>
+                        Login
+                    </a>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <!-- -----Navbar Ends----- -->
+
+    <!-- ------first page----- -->
+    <section class="section">
+        <h2 style="text-align: center;">Why Shop From Us</h2>
+        <div class="underline"></div>
+        <div class="box-container">
+            <div class="box">
+                <div class="icon">&#128666;</div>
+                <h3>FREE SHIPPING</h3>
+                <p>Lorem Ipsum has been standard and scrambled. Simply dummy text of the printing and typesetting
+                    industry.</p>
+            </div>
+            <div class="box">
+                <div class="icon">&#128222;</div>
+                <h3>24/7 SUPPORT</h3>
+                <p>Lorem Ipsum has been standard and scrambled. Simply dummy text of the printing and typesetting
+                    industry.</p>
+            </div>
+            <div class="box">
+                <div class="icon">&#128077;</div>
+                <h3>EASY RETURN</h3>
+                <p>Lorem Ipsum has been standard and scrambled. Simply dummy text of the printing and typesetting
+                    industry.</p>
+            </div>
+        </div>
+    </section>
+    <!-- ------first page Ends----- -->
+
+
+
+    <!-- ------second page ----- -->
+    <section class="second">
+        <section class="about-section">
+            <div class="about-container">
+                <div class="about-image">
+                    <img src="images/about/about1.avif" alt="Your Name">
+                </div>
+                <div class="about-content">
+                    <h1>About Us</h1>
+                    <p class="intro-text">We offer a wide range of high-quality products, from trendy fashion to the
+                        latest tech gadgets, all at competitive prices. Our user-friendly store ensures a seamless
+                        shopping experience, with easy navigation, secure payment options, and fast shipping. Whether
+                        you're searching for the perfect gift or treating yourself, we have something for everyone. Shop
+                        with us today and enjoy the best in online shopping!</p>
+                    <p>At our store, we believe in providing more than just products—we deliver an
+                        experience. With a commitment to exceptional customer service, our team works around the clock
+                        to ensure that every order is handled with care. We take pride in offering a curated selection
+                        of products from trusted brands, so you can shop with confidence. Explore our diverse
+                        categories, enjoy exclusive deals, and find exactly what you’re looking for—all from the comfort
+                        of your home. Your satisfaction is our priority!"</p>
+                    <p>Thank you for supporting us. We are excited to have you here!</p>
+                    <a href="shop.html" class="cta-button">Explore My Store</a>
+                </div>
+            </div>
+        </section>
+    </section>
+    <!-- ------second page Ends----- -->
+
+
+    <footer class="footer">
+        <div class="footer-container">
+            <!-- About Us -->
+            <div class="footer-section">
+                <h3>About Us</h3>
+                <p>Aaksh Store is a one-stop shop for high-quality, stylish, and affordable products. Whether you're
+                    looking for the latest trends or everyday essentials, your store ensures satisfaction with premium
+                    selections and hassle-free returns.</p>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- Customer Service -->
+            <div class="footer-section">
+                <h3>Customer Service</h3>
+                <ul>
+                    <li><a href="#">FAQs</a></li>
+                    <li><a href="#">Shipping & Returns</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                </ul>
+            </div>
+
+            <!-- Subscribe Section -->
+            <div class="footer-section subscribe">
+                <h3>Subscribe to Our Newsletter</h3>
+                <p>Get updates on new arrivals and special offers.</p>
+                <form class="subscribe-form">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Social Media -->
+        <div class="social-media">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-github"></i></a>
+        </div>
+        <!-- Copyright Section -->
+    </footer>
+    <footer class="footer-buttom">
+
+        <div class="buttom-footercontainer">
+            <div class="copyright">
+                &copy; 2025 Aakash Subedi. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+
+
+
+
+
+
+</body>
+
+</html>
