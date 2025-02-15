@@ -144,7 +144,7 @@ body {
 /* Product Showcase */
 .product-section {
   padding: 5rem 0;
-  background: white;
+  background: #cce7ff;
 }
 
 .products-grid {
@@ -231,71 +231,133 @@ body {
 }
 
 /* Testimonials Section */
-.testimonials-section {
+
+/* Testimonial */
+
+.testimonial-section {
   padding: 5rem 0;
   background: #f9fafb;
+
+}
+
+.testimonial-button {
+    background-color: #000000;
+    color: #ffffff;
+    padding: 8px 16px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    width: 10%;
+}
+
+.testimonials-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 60px;
 }
 
 .testimonials-grid {
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  gap: 2rem;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1rem;
-}
-
-@media (min-width: 768px) {
-  .testimonials-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (min-width: 1024px) {
-  .testimonials-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
+    display: flex;
+    gap: 2rem;
+    transition: transform 0.5s ease;
 }
 
 .testimonial-card {
-  background: white;
-  border-radius: 0.5rem;
-  padding: 2rem;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    flex: 0 0 calc(33.333% - 1.33rem);
+    background-color: #f9fafb;
+    padding: 2rem;
+    border-radius: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: all 0.3s ease;
 }
 
-.testimonial-header {
-  display: flex;
-  align-items: center;
-  margin-bottom: 1rem;
+.testimonial-card:hover {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
 }
 
-.testimonial-avatar {
-  width: 3rem;
-  height: 3rem;
-  border-radius: 9999px;
-  margin-right: 1rem;
+.testimonial-card.active {
+    background-color: #4267B2;
+    color: white;
+    transform: scale(1.05);
 }
 
-.testimonial-info {
-  display: flex;
-  flex-direction: column;
+.testimonial-image {
+    width: 128px;
+    height: 128px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 1.5rem;
+    background-color: #fce7f3;
 }
 
-.testimonial-name {
-  font-size: 1.125rem;
-  font-weight: 600;
-  color: #1f2937;
+.testimonial-image img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
 }
 
-.testimonial-rating {
-  color: #fbbf24;
+.testimonial-text {
+    margin-bottom: 1rem;
+    line-height: 1.6;
+    font-size: 1.125rem;
+    color: inherit;
 }
 
-.testimonial-comment {
-  color: #4b5563;
-  font-style: italic;
+.testimonial-author {
+    font-weight: 500;
+    color: inherit;
 }
+
+.slider-controls {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+    z-index: 10;
+    padding: 0 1rem;
+}
+
+.slider-button {
+    background-color: #00b8c5;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.slider-button:hover {
+    transform: scale(1.1);
+}
+
+.slider-button:active {
+    transform: scale(0.95);
+}
+
+@media (max-width: 768px) {
+    .testimonial-card {
+        flex: 0 0 100%;
+    }
+}
+
 
 /* CTA Section */
 .cta-section {
@@ -368,10 +430,10 @@ body {
                 <img src="images/logo/eweb_logo.png" alt="eWeb Logo" width="120" height="40">
             </a>
             <ul class="nav-menu">
-                <li><a href="index.html" class="nav-link active">Home</a></li>
+                <li><a href="index.html" class="nav-link">Home</a></li>
                 <li><a href="shop.html" class="nav-link">Shop</a></li>
                 <li>
-                    <a href="feature.html" class="nav-link">
+                    <a href="feature.html" class="nav-link active">
                         Features
                     </a>
                 </li>
@@ -496,40 +558,71 @@ body {
 
     <!-- Testimonials -->
     <section class="testimonials-section">
-      <h2 class="section-title">What Our Customers Say</h2>
-      <div class="testimonials-grid">
-        <div class="testimonial-card">
-          <div class="testimonial-header">
-            <img src="images/shop/shop1.jpg" alt="Sarah Johnson" class="testimonial-avatar">
-            <div class="testimonial-info">
-              <h3 class="testimonial-name">Sarah Johnson</h3>
-              <div class="testimonial-rating">★★★★★</div>
-            </div>
+      <h2 class="section-title" style="margin-top: 60px;">What Our Customers Say</h2>
+      <div class="testimonial-container">
+          
+          <div class="testimonials-container">
+              <div class="testimonials-grid">
+                  <div class="testimonial-card">
+                      <div class="testimonial-image">
+                          <img src="images/testimonial/Testimonial1.jpeg" alt="testimonial">
+                      </div>
+                      <p class="testimonial-text">The experience of working with Aakash was truly satisfying. he was
+                          very
+                          responsible to our needs and always tried hard to provide the best results. Thank you for
+                          your
+                          cooperation!</p>
+                      <p class="testimonial-author">- Bikash</p>
+                  </div>
+                  <div class="testimonial-card active">
+                      <div class="testimonial-image">
+                          <img src="images/testimonial/Testimonial2.jpg" alt="testimonia2">
+                      </div>
+                      <p class="testimonial-text">Aakash delivered beyond my expectations! Professional, attentive,
+                          and
+                          creative—they transformed my vision into a stunning reality. Highly recommended!</p>
+                      <p class="testimonial-author">- Anjana</p>
+                  </div>
+                  <div class="testimonial-card">
+                      <div class="testimonial-image">
+                          <img src="images/testimonial/Testimonial3.jpg" alt="testimonial3">
+                      </div>
+                      <p class="testimonial-text">Aakash surpassed all expectations! Their professionalism and
+                          creativity
+                          are unmatched. Highly recommended!</p>
+                      <p class="testimonial-author">- Bishal</p>
+                  </div>
+                  <div class="testimonial-card">
+                      <div class="testimonial-image">
+                          <img src="images/testimonial/Testimonial4.jpg" alt="testimonial4">
+                      </div>
+                      <p class="testimonial-text">Wow! I'm truly blown away by your service! It exceeded all my
+                          expectations and delivered outstanding results. Highly recommend to anyone looking for
+                          top-notch
+                          quality and impeccable service!</p>
+                      <p class="testimonial-author">- Sarah</p>
+                  </div>
+                  <div class="testimonial-card">
+                      <div class="testimonial-image">
+                          <img src="images/testimonial/Testimonial5.jpg" alt="testimonial5">
+                      </div>
+                      <p class="testimonial-text">The experience of working with Aakash was truly satisfying. he was
+                          very
+                          responsible to our needs and always tried hard to provide the best results. Thank you for
+                          your
+                          cooperation!</p>
+                      <p class="testimonial-author">- John Doe</p>
+                  </div>
+              </div>
+              <div class="slider-controls">
+                  <button class="slider-button prev">←</button>
+                  <button class="slider-button next">→</button>
+              </div>
           </div>
-          <p class="testimonial-comment">"The best online shopping experience I've ever had. The recommendations are spot-on!"</p>
-        </div>
-        <div class="testimonial-card">
-          <div class="testimonial-header">
-            <img src="images/shop/shop2.jpg" alt="Michael Chen" class="testimonial-avatar">
-            <div class="testimonial-info">
-              <h3 class="testimonial-name">Michael Chen</h3>
-              <div class="testimonial-rating">★★★★☆</div>
-            </div>
-          </div>
-          <p class="testimonial-comment">"Great selection of products and the checkout process is incredibly smooth."</p>
-        </div>
-        <div class="testimonial-card">
-          <div class="testimonial-header">
-            <img src="images/shop/shop3.jpg" alt="Emily Rodriguez" class="testimonial-avatar">
-            <div class="testimonial-info">
-              <h3 class="testimonial-name">Emily Rodriguez</h3>
-              <div class="testimonial-rating">★★★★★</div>
-            </div>
-          </div>
-          <p class="testimonial-comment">"I love how easy it is to track my orders. The customer service is excellent too!"</p>
-        </div>
-      </div>
-    </section>
+
+
+  </section>
+
 
     <!-- CTA Section -->
     <section class="cta-section">
@@ -607,7 +700,7 @@ const products = [
     name: "Premium Tops and Skirts",
     description: "Immersive sound quality with noise-cancelling technology.",
     price: "$249.99",
-    images: ["images/shop/shop1-2.jpg", "images/shop/additional1.jpg", "images/shop/additional2.jpg"],
+    images: ["images/shop/shop1-2.jpg", "images/shop/shop1-2.jpg", "images/shop/shop1-2.jpg"],
     specs: ["Premium cotton material", "Multiple color options", "Available in sizes S-XXL"]
   },
   {
@@ -807,6 +900,77 @@ window.addEventListener('click', (e) => {
     modal.style.display = 'none';
   }
 });
+
+
+
+
+
+
+        // <!-- Testimonial -->
+        document.addEventListener('DOMContentLoaded', function () {
+            const slider = document.querySelector('.testimonials-grid');
+            const cards = document.querySelectorAll('.testimonial-card');
+            const prevButton = document.querySelector('.prev');
+            const nextButton = document.querySelector('.next');
+            let currentIndex = 1; // Start with middle card active
+
+            // Calculate initial offset to center the active card
+            function calculateOffset(index) {
+                const cardWidth = cards[0].offsetWidth;
+                const gap = 32; // 2rem gap
+                const containerWidth = slider.parentElement.offsetWidth;
+                const totalCardWidth = cardWidth + gap;
+
+                // Calculate the offset needed to center the active card
+                const centerOffset = (containerWidth - cardWidth) / 2;
+                return -(index * totalCardWidth - centerOffset);
+            }
+
+            function updateSlide() {
+                const offset = calculateOffset(currentIndex);
+                slider.style.transform = `translateX(${offset}px)`;
+
+                // Update active state
+                cards.forEach((card, index) => {
+                    if (index === currentIndex) {
+                        card.classList.add('active');
+                    } else {
+                        card.classList.remove('active');
+                    }
+                });
+
+                // Update button states
+                prevButton.disabled = currentIndex === 0;
+                nextButton.disabled = currentIndex === cards.length - 1;
+            }
+
+            prevButton.addEventListener('click', () => {
+                if (currentIndex > 0) {
+                    currentIndex--;
+                    updateSlide();
+                }
+            });
+
+            nextButton.addEventListener('click', () => {
+                if (currentIndex < cards.length - 1) {
+                    currentIndex++;
+                    updateSlide();
+                }
+            });
+
+            // Handle window resize
+            window.addEventListener('resize', () => {
+                updateSlide();
+            });
+
+            // Initial setup
+            updateSlide();
+        });
+        // <!-- Testimonial ends -->
+
+
+
+
   </script>
 </body>
 </html>
