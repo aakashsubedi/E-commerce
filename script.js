@@ -1,5 +1,14 @@
 
 
+
+
+
+
+
+
+
+
+
 document.addEventListener("DOMContentLoaded", () => {
     const slider = document.querySelector(".slider")
     const prevBtn = document.querySelector(".prev")
@@ -61,83 +70,190 @@ document.addEventListener("DOMContentLoaded", () => {
     })
 })
 
+const products = {
+    product1: {
+        name: "Stylish Summer Dress",
+        price: "$49.99",
+        images: [
+            "images/collection/collection1.jpg",
+            "images/collection/collection1-1.jpg"
+        ],
+        description: "A beautiful summer dress made from breathable organic cotton.",
+        specifications: [
+            "Material: 100% Organic Cotton",
+            "Care: Machine wash cold",
+            "Sizes: XS - XL"
+        ]
+    },
+    
+    product2: {
+        name: "Stylish Summer Dress",
+        price: "$49.99",
+        images: [
+            "images/collection/collection2-1.png",
+            "images/collection/collection2-2.png",
+            "images/collection/collection2-3.jpeg"
+        ],
+        description: "A beautiful summer dress made from breathable organic cotton.",
+        specifications: [
+            "Material: 100% Organic Cotton",
+            "Care: Machine wash cold",
+            "Sizes: XS - XL"
+        ]
+    },
 
-//   -----Collection-----
-document.addEventListener('DOMContentLoaded', () => {
-    const productGrid = document.getElementById('product-grid');
-    const categoryFilter = document.getElementById('category-filter');
-    const sizeFilter = document.getElementById('size-filter');
-    const sortOptions = document.getElementById('sort-options');
+    product3: {
+        name: "Stylish Summer Dress",
+        price: "$49.99",
+        images: [
+            "images/collection/collection3-1.jpg",
+            "images/collection/collection3-2.jpg",
+            "images/collection/collection3-3.jpg"
+        ],
+        description: "A beautiful summer dress made from breathable organic cotton.",
+        specifications: [
+            "Material: 100% Organic Cotton",
+            "Care: Machine wash cold",
+            "Sizes: XS - XL"
+        ]
+    },
 
-    // Initialize Feather icons
-    feather.replace();
+    product4: {
+        name: "Stylish Summer Dress",
+        price: "$49.99",
+        images: [
+            "images/collection/collection4-1.jpg",
+            "images/collection/collection4-2.jpg",
+            "images/collection/collection4-3.jpg"
+        ],
+        description: "A beautiful summer dress made from breathable organic cotton.",
+        specifications: [
+            "Material: 100% Organic Cotton",
+            "Care: Machine wash cold",
+            "Sizes: XS - XL"
+        ]
+    },
 
-    // Sample product data
-    const products = [
-        { id: 1, name: "Elegant White Shirt", category: "shirts", price: 59.99, sizes: ["S", "M", "L", "XL"], image: "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1480&q=80" },
-        { id: 2, name: "Premium Denim Jeans", category: "pants", price: 89.99, sizes: ["S", "M", "L"], image: "https://images.unsplash.com/photo-1541099649105-f69ad21f3246?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80" },
-        { id: 3, name: "Floral Maxi Dress", category: "dresses", price: 79.99, sizes: ["S", "M", "L"], image: "https://images.unsplash.com/photo-1572804013309-59a88b7e92f1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1446&q=80" },
-        { id: 4, name: "Tailored Polo Shirt", category: "shirts", price: 49.99, sizes: ["M", "L", "XL"], image: "https://images.unsplash.com/photo-1586363104862-3a5e2ab60d99?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80" },
-        { id: 5, name: "Silk Evening Gown", category: "dresses", price: 159.99, sizes: ["S", "M", "L"], image: "https://images.unsplash.com/photo-1566174053879-31528523f8ae?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" },
-        { id: 6, name: "Slim Fit Chinos", category: "pants", price: 69.99, sizes: ["M", "L", "XL"], image: "https://images.unsplash.com/photo-1624378439575-d8705ad7ae80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" },
-    ];
+    product5: {
+        name: "Stylish Summer Dress",
+        price: "$49.99",
+        images: [
+            "images/collection/collection5.jpg",
+            "images/collection/collection5-1.jpg"
+        ],
+        description: "A beautiful summer dress made from breathable organic cotton.",
+        specifications: [
+            "Material: 100% Organic Cotton",
+            "Care: Machine wash cold",
+            "Sizes: XS - XL"
+        ]
+    },
 
-    function renderProducts(productsToRender) {
-        productGrid.innerHTML = '';
-        productsToRender.forEach(product => {
-            const productElement = document.createElement('div');
-            productElement.classList.add('product-item');
-            productElement.innerHTML = `
-                <img src="${product.image}" alt="${product.name}" class="product-image">
-                <div class="product-info">
-                    <h3 class="product-name">${product.name}</h3>
-                    <p class="product-category">${product.category}</p>
-                    <p class="product-price">$${product.price.toFixed(2)}</p>
-                    <div class="product-sizes">
-                        ${product.sizes.map(size => `<span class="size-tag">${size}</span>`).join('')}
-                    </div>
-                </div>
-                <div class="product-action">
-                    <i data-feather="shopping-bag"></i>
-                </div>
-            `;
-            productGrid.appendChild(productElement);
+    product6: {
+        name: "Stylish Summer Dress",
+        price: "$49.99",
+        images: [
+            "images/collection/collection6.jpeg",
+            "images/collection/collection6-1.jpeg",
+            "images/collection/collection6-2.jpeg"
+        ],
+        description: "A beautiful summer dress made from breathable organic cotton.",
+        specifications: [
+            "Material: 100% Organic Cotton",
+            "Care: Machine wash cold",
+            "Sizes: XS - XL"
+        ]
+    },
+
+    product7: {
+        name: "Stylish Summer Dress",
+        price: "$49.99",
+        images: [
+            "images/collection/collection7.jpeg",
+            "images/collection/collection7-1.jpeg",
+            "images/collection/collection7-2.jpeg"
+        ],
+        description: "A beautiful summer dress made from breathable organic cotton.",
+        specifications: [
+            "Material: 100% Organic Cotton",
+            "Care: Machine wash cold",
+            "Sizes: XS - XL"
+        ]
+    },
+
+    product8: {
+        name: "Stylish Summer Dress",
+        price: "$49.99",
+        images: [
+            "images/collection/collection8.jpeg",
+            "images/collection/collection8-1.jpeg",
+            "images/collection/collection8-2.jpeg"
+        ],
+        description: "A beautiful summer dress made from breathable organic cotton.",
+        specifications: [
+            "Material: 100% Organic Cotton",
+            "Care: Machine wash cold",
+            "Sizes: XS - XL"
+        ]
+    },
+};
+
+document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll('.quick-look-btn').forEach(button => {
+        button.addEventListener('click', (e) => {
+            const productCard = e.target.closest('.product-card');
+            const productId = productCard.dataset.productId;
+            showQuickView(products[productId]);
         });
-        feather.replace();
-    }
+    });
 
-    function filterAndSortProducts() {
-        let filteredProducts = [...products];
+    document.getElementById('modalClose').addEventListener('click', () => {
+        document.getElementById('quickviewOverlay').style.display = 'none';
+    });
 
-        // Apply category filter
-        if (categoryFilter.value !== 'all') {
-            filteredProducts = filteredProducts.filter(product => product.category === categoryFilter.value);
+    document.getElementById('quickviewOverlay').addEventListener('click', (e) => {
+        if (e.target === document.getElementById('quickviewOverlay')) {
+            document.getElementById('quickviewOverlay').style.display = 'none';
         }
-
-        // Apply size filter
-        if (sizeFilter.value !== 'all') {
-            filteredProducts = filteredProducts.filter(product => product.sizes.includes(sizeFilter.value.toUpperCase()));
-        }
-
-        // Apply sorting
-        if (sortOptions.value === 'price-low-high') {
-            filteredProducts.sort((a, b) => a.price - b.price);
-        } else if (sortOptions.value === 'price-high-low') {
-            filteredProducts.sort((a, b) => b.price - a.price);
-        }
-
-        renderProducts(filteredProducts);
-    }
-
-    // Initial render
-    renderProducts(products);
-
-    // Event listeners for filters and sort
-    categoryFilter.addEventListener('change', filterAndSortProducts);
-    sizeFilter.addEventListener('change', filterAndSortProducts);
-    sortOptions.addEventListener('change', filterAndSortProducts);
+    });
 });
-//   -----Collection-----
+
+function showQuickView(product) {
+    const overlay = document.getElementById('quickviewOverlay');
+    const modalContent = document.getElementById('modalContent');
+
+    modalContent.innerHTML = `
+        <div class="modal-images">
+            <div class="main-image">
+                <img src="${product.images[0]}" alt="${product.name}" id="mainImage">
+            </div>
+            <div class="thumbnail-grid">
+                ${product.images.map((img, index) => `
+                    <div class="thumbnail" onclick="changeMainImage('${product.images[index]}')">
+                        <img src="${img}" alt="Thumbnail ${index + 1}">
+                    </div>
+                `).join('')}
+            </div>
+        </div>
+        <div class="modal-details">
+            <h2 class="product-title">${product.name}</h2>
+            <p class="product-price">${product.price}</p>
+            <p class="product-description">${product.description}</p>
+            <ul class="product-specs">
+                ${product.specifications.map(spec => `<li>${spec}</li>`).join('')}
+            </ul>
+        </div>
+    `;
+
+    overlay.style.display = 'flex';
+}
+
+window.changeMainImage = function (src) {
+    document.getElementById('mainImage').src = src;
+}
+// collection
+
+
 
 document.addEventListener('DOMContentLoaded', () => {
     const productGrid = document.getElementById('product-grid');
@@ -213,4 +329,105 @@ document.addEventListener('DOMContentLoaded', () => {
     categoryFilter.addEventListener('change', filterAndSortProducts);
     sizeFilter.addEventListener('change', filterAndSortProducts);
     sortOptions.addEventListener('change', filterAndSortProducts);
+});
+
+
+
+// Blog posts data
+const blogPosts = [
+    {
+        id: 1,
+        title: "Latest Fashion Trends 2025",
+        excerpt: "Discover the upcoming fashion trends that will dominate the industry this year.",
+        image: "images/banner/banner1.jpg",
+        author: "Sarah Johnson",
+        date: "March 15, 2025",
+        readTime: "5 min read",
+        category: "Fashion"
+    },
+    {
+        id: 2,
+        title: "Sustainable Shopping Guide",
+        excerpt: "Learn how to make environmentally conscious shopping decisions without compromising on style.",
+        image: "images/blog/blog2.jpeg",
+        author: "Mike Chen",
+        date: "March 12, 2025",
+        readTime: "4 min read",
+        category: "Sustainability"
+    },
+    {
+        id: 3,
+        title: "Accessorizing 101",
+        excerpt: "Master the art of accessorizing with our comprehensive guide to jewelry and accessories.",
+        image: "images/blog/blog6.jpg",
+        author: "Emma Davis",
+        date: "March 10, 2025",
+        readTime: "6 min read",
+        category: "Style"
+    }
+];
+
+// Function to create blog post cards
+function createBlogPost(post) {
+    return `
+        <article class="blog-card animate-fade-up">
+            <div class="blog-card-image">
+                <img src="${post.image}" alt="${post.title}" />
+                <span class="blog-card-category">${post.category}</span>
+            </div>
+            <div class="blog-card-content">
+                <h3>${post.title}</h3>
+                <p>${post.excerpt}</p>
+                <div class="blog-card-meta">
+                    <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                        ${post.author}
+                    </span>
+                    <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                        ${post.readTime}
+                    </span>
+                </div>
+                <div class="blog-card-actions">
+                    <a href="#" class="read-more">
+                        Read More
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+                    </a>
+                    <div class="action-buttons">
+                        <button class="action-button" aria-label="Like">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                        </button>
+                        <button class="action-button" aria-label="Share">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </article>
+    `;
+}
+
+// Render blog posts
+document.addEventListener('DOMContentLoaded', () => {
+    const blogGrid = document.getElementById('blogGrid');
+    blogGrid.innerHTML = blogPosts.map(post => createBlogPost(post)).join('');
+
+    // Newsletter form submission
+    const newsletterForm = document.getElementById('newsletterForm');
+    newsletterForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const email = e.target.querySelector('input[type="email"]').value;
+        alert(`Thank you for subscribing with: ${email}`);
+        e.target.reset();
+    });
+
+    // Add click handlers for like and share buttons
+    document.querySelectorAll('.action-button').forEach(button => {
+        button.addEventListener('click', () => {
+            button.style.transform = 'scale(1.2)';
+            setTimeout(() => {
+                button.style.transform = 'scale(1)';
+            }, 200);
+        });
+    });
 });

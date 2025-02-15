@@ -140,7 +140,7 @@
             <!-- Product Collections Section -->
             <div class="scr-product-grid">
                 <div class="scr-product">
-                   <a href="shop.html"> <img src="images/banner/banner4.jpg" alt="Women Collection"></a>
+                    <a href="shop.html"> <img src="images/banner/banner4.jpg" alt="Women Collection"></a>
                     <div class="scr-product-info">
                         <h3>SUMMER</h3>
                         <p>Women Collection</p>
@@ -198,14 +198,36 @@
             </div>
             <!-- Product items will be dynamically inserted here -->
             <div class="container">
-                <div class="product-grid">
+                <div class="products-grid">
                     <!-- Product Card 1 -->
-                    <div class="product-card">
-                        <div class="product-image-container">
-                            <img src="images/collection/collection1.jpg" alt="Premium Cotton T-Shirt">
-                            <div class="quick-view-overlay">
-                                <button class="quick-view-button">Quick View</button>
+                    <div class="product-card" data-product-id="product1">
+                        <div class="product-image">
+                            <img src="images/collection/collection1.jpg" alt="Stylish Summer Dress">
+                            <button class="quick-look-btn">Quick Look</button>
+                        </div>
+                        <div class="product-info">
+                            <h2>Premium Suit for Women</h2>
+                            <p class="sizes">Sizes: S, M, L, XL</p>
+                            <div class="price-heart">
+                                <span class="price">$29.99</span>
+                                <button class="heart-button">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <path
+                                            d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" />
+                                    </svg>
+                                </button>
                             </div>
+                            <button class="add-to-cart">Add to Cart</button>
+                        </div>
+                    </div>
+            
+                    <!-- Product Card 2 -->
+                    <div class="product-card" data-product-id="product2">
+                        <div class="product-image">
+                            <img src="images/collection/collection2.png" alt="Premium">
+                            <button class="quick-look-btn">Quick Look</button>
                         </div>
                         <div class="product-info">
                             <h2>Premium Suit for Women</h2>
@@ -225,45 +247,18 @@
                         </div>
                     </div>
 
-                    <!-- Product Card 2 -->
-                    <div class="product-card">
-                        <div class="product-image-container">
-                            <img src="images/collection/collection2.jpg" alt="Slim Fit Denim Jeans">
-                            <div class="quick-view-overlay">
-                                <button class="quick-view-button">Quick View</button>
-                            </div>
-                        </div>
-                        <div class="product-info">
-                            <h2>Slim Fit Denim Jeans</h2>
-                            <p class="sizes">Sizes: 28, 30, 32, 34</p>
-                            <div class="price-heart">
-                                <span class="price">$79.99</span>
-                                <button class="heart-button">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
-                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                        stroke-linejoin="round">
-                                        <path
-                                            d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" />
-                                    </svg>
-                                </button>
-                            </div>
-                            <button class="add-to-cart">Add to Cart</button>
-                        </div>
-                    </div>
-
+                    
                     <!-- Product Card 3 -->
-                    <div class="product-card">
-                        <div class="product-image-container">
-                            <img src="images/collection/collection3.jpg" alt="Classic Pullover Hoodie">
-                            <div class="quick-view-overlay">
-                                <button class="quick-view-button">Quick View</button>
-                            </div>
+                    <div class="product-card" data-product-id="product3">
+                        <div class="product-image">
+                            <img src="images/collection/collection3.jpg" alt="Premium">
+                            <button class="quick-look-btn">Quick Look</button>
                         </div>
                         <div class="product-info">
-                            <h2>Classic Shoes</h2>
-                            <p class="sizes">Sizes: M, L, XL</p>
+                            <h2>Premium Suit for Women</h2>
+                            <p class="sizes">Sizes: S, M, L, XL</p>
                             <div class="price-heart">
-                                <span class="price">$59.99</span>
+                                <span class="price">$29.99</span>
                                 <button class="heart-button">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
                                         fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
@@ -277,41 +272,15 @@
                         </div>
                     </div>
 
+    
                     <!-- Product Card 4 -->
-                    <div class="product-card">
-                        <div class="product-image-container">
-                            <img src="images/collection/collection4.jpg" alt="Winter Down Jacket">
-                            <div class="quick-view-overlay">
-                                <button class="quick-view-button">Quick View</button>
-                            </div>
+                    <div class="product-card" data-product-id="product4">
+                        <div class="product-image">
+                            <img src="images/collection/collection4.jpg" alt="Premium">
+                            <button class="quick-look-btn">Quick Look</button>
                         </div>
                         <div class="product-info">
-                            <h2>Premium Cotton Shirt</h2>
-                            <p class="sizes">Sizes: S, M, L</p>
-                            <div class="price-heart">
-                                <span class="price">$149.99</span>
-                                <button class="heart-button">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
-                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                        stroke-linejoin="round">
-                                        <path
-                                            d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" />
-                                    </svg>
-                                </button>
-                            </div>
-                            <button class="add-to-cart">Add to Cart</button>
-                        </div>
-                    </div>
-
-                    <div class="product-card">
-                        <div class="product-image-container">
-                            <img src="images/collection/collection5.jpg" alt="Premium Cotton T-Shirt">
-                            <div class="quick-view-overlay">
-                                <button class="quick-view-button">Quick View</button>
-                            </div>
-                        </div>
-                        <div class="product-info">
-                            <h2>Premium Suit For Women</h2>
+                            <h2>Premium Suit for Women</h2>
                             <p class="sizes">Sizes: S, M, L, XL</p>
                             <div class="price-heart">
                                 <span class="price">$29.99</span>
@@ -328,15 +297,15 @@
                         </div>
                     </div>
 
-                    <div class="product-card">
-                        <div class="product-image-container">
-                            <img src="images/collection/collection6.jpg" alt="Premium Cotton T-Shirt">
-                            <div class="quick-view-overlay">
-                                <button class="quick-view-button">Quick View</button>
-                            </div>
+    
+                    <!-- Product Card 5 -->
+                    <div class="product-card" data-product-id="product5">
+                        <div class="product-image">
+                            <img src="images/collection/collection5-1.jpg" alt="Suit for Men">
+                            <button class="quick-look-btn">Quick Look</button>
                         </div>
                         <div class="product-info">
-                            <h2>Premium Cotton T-Shirt</h2>
+                            <h2>Premium Suit for Men</h2>
                             <p class="sizes">Sizes: S, M, L, XL</p>
                             <div class="price-heart">
                                 <span class="price">$29.99</span>
@@ -353,15 +322,15 @@
                         </div>
                     </div>
 
-                    <div class="product-card">
-                        <div class="product-image-container">
-                            <img src="images/collection/colllection7.jpg" alt="Premium Cotton T-Shirt">
-                            <div class="quick-view-overlay">
-                                <button class="quick-view-button">Quick View</button>
-                            </div>
+    
+                    <!-- Product Card 6 -->
+                    <div class="product-card" data-product-id="product6">
+                        <div class="product-image">
+                            <img src="images/collection/collection6.jpeg" alt="Tops and Skirt">
+                            <button class="quick-look-btn">Quick Look</button>
                         </div>
                         <div class="product-info">
-                            <h2>Premium Suit For Men</h2>
+                            <h2>Premium Top and Skirt</h2>
                             <p class="sizes">Sizes: S, M, L, XL</p>
                             <div class="price-heart">
                                 <span class="price">$29.99</span>
@@ -378,15 +347,15 @@
                         </div>
                     </div>
 
-                    <div class="product-card">
-                        <div class="product-image-container">
-                            <img src="images/collection/collection8.jpg" alt="Premium Cotton T-Shirt">
-                            <div class="quick-view-overlay">
-                                <button class="quick-view-button">Quick View</button>
-                            </div>
+    
+                    <!-- Product Card 7 -->
+                    <div class="product-card" data-product-id="product7">
+                        <div class="product-image">
+                            <img src="images/collection/collection7.jpeg" alt="Hoodies">
+                            <button class="quick-look-btn">Quick Look</button>
                         </div>
                         <div class="product-info">
-                            <h2>Premium Jeans</h2>
+                            <h2>Premium Hoodies</h2>
                             <p class="sizes">Sizes: S, M, L, XL</p>
                             <div class="price-heart">
                                 <span class="price">$29.99</span>
@@ -402,9 +371,42 @@
                             <button class="add-to-cart">Add to Cart</button>
                         </div>
                     </div>
+
+    
+                    <!-- Product Card 8 -->
+                    <div class="product-card" data-product-id="product8">
+                        <div class="product-image">
+                            <img src="images/collection/collection8.jpeg" alt="Hoodies for Couple">
+                            <button class="quick-look-btn">Quick Look</button>
+                        </div>
+                        <div class="product-info">
+                            <h2>Premium Hoodies for Couple</h2>
+                            <p class="sizes">Sizes: S, M, L, XL</p>
+                            <div class="price-heart">
+                                <span class="price">$29.99</span>
+                                <button class="heart-button">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <path
+                                            d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" />
+                                    </svg>
+                                </button>
+                            </div>
+                            <button class="add-to-cart">Add to Cart</button>
+                        </div>
+                    </div>
+
+    
                 </div>
             </div>
-            </div>
+            
+            <!-- Quick View Modal -->
+            <div id="quickviewOverlay" class="quickview-overlay">
+                <div class="quickview-modal">
+                    <button id="modalClose" class="modal-close">&times;</button>
+                    <div id="modalContent" class="modal-content"></div>
+                </div>
             </div>
         </main>
     </section>
@@ -431,46 +433,10 @@
         <div class="blog-container">
             <h2 class="blog-heading">Latest Blog Posts</h2>
             <p class="blog-subheading">Stay updated with the latest trends, tips, and news in the world.</p>
-            <div class="blog-grid">
                 <!-- Blog Post 1 -->
-                <div class="blog-card">
-                    <div class="blog-image">
-                        <img src="images/blog/blog1.jpg" alt="Blog Post 1">
-                    </div>
-                    <div class="blog-content">
-                        <h3 class="blog-title">Introduction to E-commerce</h3>
-                        <p class="blog-excerpt">In today’s fast-paced world, e-commerce has revolutionized the way we
-                            shop. No longer do we need to leave the comfort of our homes to purchase the products we
-                            love.</p>
-                        <a href="#" class="blog-read-more">Read More →</a>
-                    </div>
-                </div>
-
-                <!-- Blog Post 2 -->
-                <div class="blog-card">
-                    <div class="blog-image">
-                        <img src="images/blog/blog2.jpg" alt="Blog Post 2">
-                    </div>
-                    <div class="blog-content">
-                        <h3 class="blog-title">Why Choose Our E-commerce Platform?</h3>
-                        <p class="blog-excerpt">Our website is designed with you in mind. We offer a user-friendly
-                            interface that makes shopping a breeze, from browsing through categories to checking out
-                            quickly.</p>
-                        <a href="#" class="blog-read-more">Read More →</a>
-                    </div>
-                </div>
-
-                <!-- Blog Post 3 -->
-                <div class="blog-card">
-                    <div class="blog-image">
-                        <img src="images/blog/blog3.jpg" alt="Blog Post 3">
-                    </div>
-                    <div class="blog-content">
-                        <h3 class="blog-title">Benefits of Online Shopping</h3>
-                        <p class="blog-excerpt">Shopping online doesn’t just save you time—it also offers a range of
-                            other benefits. With detailed product descriptions, customer reviews, and easy price
-                            comparisons, you can make informed decisions without stepping foot in a physical store.</p>
-                        <a href="#" class="blog-read-more">Read More →</a>
+                <div class="blogg-container">
+                    <div class="blog-grid" id="blogGrid">
+                        <!-- Blog posts will be inserted here by JavaScript -->
                     </div>
                 </div>
             </div>
