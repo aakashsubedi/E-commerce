@@ -183,7 +183,7 @@ body {
 
 .product-image {
   width: 100%;
-  height: 16rem;
+  height: 26rem;
   object-fit: cover;
 }
 
@@ -461,7 +461,7 @@ body {
         <div class="product-card">
           <img src="images/shop/shop1-2.jpg" alt="Premium Wireless Headphones" class="product-image">
           <div class="product-details">
-            <h3 class="product-name">Premium Wireless Headphones</h3>
+            <h3 class="product-name">Premium Tops and Skirts</h3>
             <p class="product-description">Immersive sound quality with noise-cancelling technology.</p>
             <div class="product-footer">
               <span class="product-price">$249.99</span>
@@ -472,7 +472,7 @@ body {
         <div class="product-card">
           <img src="images/shop/shop2.jpg" alt="Smart Fitness Tracker" class="product-image">
           <div class="product-details">
-            <h3 class="product-name">Smart Fitness Tracker</h3>
+            <h3 class="product-name">Smart gym outfits</h3>
             <p class="product-description">Track your health and fitness goals with precision.</p>
             <div class="product-footer">
               <span class="product-price">$129.99</span>
@@ -600,6 +600,213 @@ body {
     </div>
 </footer>
 
-  <script src="script.js"></script>
+  <script>
+    // Product details data (add more products as needed)
+const products = [
+  {
+    name: "Premium Tops and Skirts",
+    description: "Immersive sound quality with noise-cancelling technology.",
+    price: "$249.99",
+    images: ["images/shop/shop1-2.jpg", "images/shop/additional1.jpg", "images/shop/additional2.jpg"],
+    specs: ["Premium cotton material", "Multiple color options", "Available in sizes S-XXL"]
+  },
+  {
+    name: "Smart gym outfits",
+    description: "Track your health and fitness goals with precision.",
+    price: "$129.99",
+    images: ["images/shop/shop2.jpg", "images/shop/gym-additional1.jpg", "images/shop/gym-additional2.jpg"],
+    specs: ["Moisture-wicking fabric", "UV protection", "Breathable mesh panels"]
+  },
+  {
+    name: "Ultra-thin Laptop",
+    description: "Powerful performance in a sleek, portable design.",
+    price: "$1299.99",
+    images: ["images/shop/shop4.jpg", "images/shop/laptop-additional1.jpg", "images/shop/laptop-additional2.jpg"],
+    specs: ["16GB RAM", "1TB SSD", "Intel Core i7 processor"]
+  }
+];
+
+// Modal elements
+const modal = document.createElement('div');
+modal.className = 'product-modal';
+modal.innerHTML = `
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <div class="carousel">
+      <div class="carousel-images"></div>
+      <button class="carousel-prev">❮</button>
+      <button class="carousel-next">❯</button>
+    </div>
+    <div class="modal-details">
+      <h2 class="modal-title"></h2>
+      <p class="modal-description"></p>
+      <div class="modal-specs"></div>
+      <div class="modal-footer">
+        <span class="modal-price"></span>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+    </div>
+  </div>
+`;
+document.body.appendChild(modal);
+
+// Modal styles (add to your CSS)
+const style = document.createElement('style');
+style.textContent = `
+.product-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.8);
+  z-index: 1000;
+}
+
+.modal-content {
+  position: relative;
+  background: white;
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  border-radius: 8px;
+}
+
+.close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.carousel {
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.carousel-images {
+  display: flex;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.carousel-images img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+
+.carousel-prev, .carousel-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.5);
+  color: white;
+  border: none;
+  padding: 1rem;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.carousel-prev { left: 1rem; }
+.carousel-next { right: 1rem; }
+
+.modal-details {
+  padding: 1rem;
+}
+
+.modal-title {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.modal-specs {
+  margin: 1rem 0;
+  color: #666;
+}
+
+.add-to-cart {
+  background: #4f46e5;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 9999px;
+  cursor: pointer;
+}
+`;
+document.head.appendChild(style);
+
+// Modal functionality
+let currentImageIndex = 0;
+let currentProductIndex = 0;
+
+document.querySelectorAll('.product-button').forEach((button, index) => {
+  button.addEventListener('click', () => showProduct(index));
+});
+
+function showProduct(index) {
+  currentProductIndex = index;
+  currentImageIndex = 0;
+  const product = products[index];
+  
+  // Update modal content
+  modal.querySelector('.modal-title').textContent = product.name;
+  modal.querySelector('.modal-description').textContent = product.description;
+  modal.querySelector('.modal-price').textContent = product.price;
+  
+  // Update specs
+  const specsContainer = modal.querySelector('.modal-specs');
+  specsContainer.innerHTML = product.specs.map(spec => 
+    `<div class="spec-item">✓ ${spec}</div>`
+  ).join('');
+  
+  // Update carousel
+  const carousel = modal.querySelector('.carousel-images');
+  carousel.innerHTML = product.images.map(img => 
+    `<img src="${img}" alt="${product.name}">`
+  ).join('');
+  
+  updateCarousel();
+  modal.style.display = 'block';
+}
+
+function updateCarousel() {
+  const images = modal.querySelectorAll('.carousel-images img');
+  images.forEach((img, i) => {
+    img.style.transform = `translateX(-${currentImageIndex * 100}%)`;
+  });
+}
+
+// Carousel controls
+modal.querySelector('.carousel-prev').addEventListener('click', () => {
+  if (currentImageIndex > 0) {
+    currentImageIndex--;
+    updateCarousel();
+  }
+});
+
+modal.querySelector('.carousel-next').addEventListener('click', () => {
+  const product = products[currentProductIndex];
+  if (currentImageIndex < product.images.length - 1) {
+    currentImageIndex++;
+    updateCarousel();
+  }
+});
+
+// Close modal
+modal.querySelector('.close').addEventListener('click', () => {
+  modal.style.display = 'none';
+});
+
+window.addEventListener('click', (e) => {
+  if (e.target === modal) {
+    modal.style.display = 'none';
+  }
+});
+  </script>
 </body>
 </html>
