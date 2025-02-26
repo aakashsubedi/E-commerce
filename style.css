@@ -1003,7 +1003,7 @@ body {
 .subscribe-form button {
   padding: 10px 15px;
   border: none;
-  background-color: #ff6b6b;
+  background-color: #4A90E2;
   color: white;
   border-radius: 5px;
   cursor: pointer;
@@ -1012,7 +1012,7 @@ body {
 }
 
 .subscribe-form button:hover {
-  background-color: #e55050;
+  background-color: #3a7bc8;
 }
 
 /* Social Media Icons */

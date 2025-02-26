@@ -3,11 +3,11 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <title>Contact Us</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
 
     <style>
         .contact {
@@ -176,8 +176,6 @@
         }
 
 
-
-
         /* Contact Section */
         .c-container {
             background-color: #CCE7FF;
@@ -279,220 +277,231 @@
         .c-container .info div p:first-child {
             font-weight: 600;
         }
+
+        .mail-p {
+            margin-top: 20px;
+            font-weight: bold;
+            font-size: large;
+        }
+
+        .mail {
+            text-decoration: none;
+        }
     </style>
 </head>
 
 <body>
 
-    <!-- -----Navbar ----- -->
-    <header class="header">
-        <div class="container">
-            <nav class="navbar">
-                <a href="index.html" class="logo">
-                    <img src="images/logo/eweb_logo.png" alt="eWeb Logo" width="120" height="40">
-                </a>
-                <ul class="nav-menu">
-                    <li><a href="index.html" class="nav-link">Home</a></li>
-                    <li><a href="shop.html" class="nav-link">Shop</a></li>
-                    <li>
-                        <a href="feature.html" class="nav-link">
-                            Features
-                        </a>
-                    </li>
-                    <li><a href="blog.html" class="nav-link">Blog</a></li>
-                    <li><a href="about.html" class="nav-link">About</a></li>
-                    <li><a href="contact.html" class="nav-link active">Contact</a></li>
-                </ul>
-                <div class="nav-icons">
-                    <button class="icon-btn" aria-label="Search">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <circle cx="11" cy="11" r="8" />
-                            <path d="m21 21-4.3-4.3" />
-                        </svg>
-                    </button>
-                    <button class="icon-btn" aria-label="Cart">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <circle cx="8" cy="21" r="1" />
-                            <circle cx="19" cy="21" r="1" />
-                            <path
-                                d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12" />
-                        </svg>
-                    </button>
-                    <button class="icon-btn" aria-label="Favorites">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path
-                                d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" />
-                        </svg>
-                    </button>
-                    <a href="login.html" class="login-btn">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" />
-                            <circle cx="12" cy="7" r="4" />
-                        </svg>
-                        Login
+<!-- -----Navbar ----- -->
+<header class="header">
+    <div class="container">
+        <nav class="navbar">
+            <a class="logo" href="index.html">
+                <img alt="eWeb Logo" height="40" src="images/logo/eweb_logo.png" width="120">
+            </a>
+            <ul class="nav-menu">
+                <li><a class="nav-link" href="index.html">Home</a></li>
+                <li><a class="nav-link" href="shop.html">Shop</a></li>
+                <li>
+                    <a class="nav-link" href="feature.html">
+                        Features
                     </a>
-                </div>
-            </nav>
+                </li>
+                <li><a class="nav-link" href="blog.html">Blog</a></li>
+                <li><a class="nav-link" href="about.html">About</a></li>
+                <li><a class="nav-link active" href="contact.html">Contact</a></li>
+            </ul>
+            <div class="nav-icons">
+                <button aria-label="Search" class="icon-btn">
+                    <svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                         stroke-width="2" viewBox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="11" cy="11" r="8"/>
+                        <path d="m21 21-4.3-4.3"/>
+                    </svg>
+                </button>
+                <button aria-label="Cart" class="icon-btn">
+                    <svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                         stroke-width="2" viewBox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="8" cy="21" r="1"/>
+                        <circle cx="19" cy="21" r="1"/>
+                        <path
+                                d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"/>
+                    </svg>
+                </button>
+                <button aria-label="Favorites" class="icon-btn">
+                    <svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                         stroke-width="2" viewBox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                                d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
+                    </svg>
+                </button>
+                <a class="login-btn" href="login.html">
+                    <svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                         stroke-width="2" viewBox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/>
+                        <circle cx="12" cy="7" r="4"/>
+                    </svg>
+                    Login
+                </a>
+            </div>
+        </nav>
+    </div>
+</header>
+<!-- -----Navbar Ends----- -->
+
+<!-- -----FirstPAge----- -->
+<section class="contact">
+    <div class="contact-container">
+        <div class="left">
+            <h1>WANT TO</h1>
+            <h1 class="bold">SAY HELLO?</h1>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/aakashsubedi11"><i class="fab fa-facebook"></i></a>
+                <a href="https://www.linkedin.com/in/aakashsubedi/"><i class="fab fa-linkedin"></i></a>
+                <a href="https://www.instagram.com/aakashsubedi_/"><i class="fab fa-instagram"></i></a>
+                <a href="https://github.com/aakashsubedi"><i class="fab fa-github"></i></a>
+            </div>
+            <p class="mail-p">
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=aakkashsubedi@gmail.com&su=Hello&body=Hi%20Aakkash,%20I%20wanted%20to%20connect%20with%20you." class="mail"
+                   target="_blank">
+                    aakkashsubedi@gmail.com
+                </a>
+            </p>
         </div>
-    </header>
-    <!-- -----Navbar Ends----- -->
+        <div class="right">
+            <p>It’s time to Get Attached Now.</p>
+            <p style="margin-top: 50px;"> Scroll Down For More <i class="fa-solid fa-arrow-down"></i></p>
 
-    <!-- -----FirstPAge----- -->
-    <section class="contact">
-        <div class="contact-container">
-            <div class="left">
-                <h1>WANT TO</h1>
-                <h1 class="bold">SAY HELLO?</h1>
-                <div class="social-icons">
-                    <a href="https://www.facebook.com/aakashsubedi11"><i class="fab fa-facebook"></i></a>
-                    <a href="https://www.linkedin.com/in/aakashsubedi/"><i class="fab fa-linkedin"></i></a>
-                    <a href="https://www.instagram.com/aakashsubedi_/"><i class="fab fa-instagram"></i></a>
-                    <a href="https://github.com/aakashsubedi"><i class="fab fa-github"></i></a>
-                </div>
-                <p class="email">aakkashsubedi@gmail.com</p>
-            </div>
-            <div class="right">
-                <p>It’s time to Get Attached Now.</p>
-                <p style="margin-top: 50px;"> Scroll Down For More <i class="fa-solid fa-arrow-down"></i></p>
-
-            </div>
         </div>
-    </section>
-    <!-- -----FirstPAge Ends----- -->
+    </div>
+</section>
+<!-- -----FirstPAge Ends----- -->
 
-    <!-- -----Second Page----- -->
-    <div class="second-container">
-        <div class="grid">
-            <!-- Address Section -->
-            <div>
-                <i class="fas fa-map-marker-alt icon"></i>
-                <h2>OUR ADDRESS</h2>
-                <p>Bharatpur-12<br>Chitwan<br>Nepal</p>
+<!-- -----Second Page----- -->
+<div class="second-container">
+    <div class="grid">
+        <!-- Address Section -->
+        <div>
+            <i class="fas fa-map-marker-alt icon"></i>
+            <h2>OUR ADDRESS</h2>
+            <p>Bharatpur-12<br>Chitwan<br>Nepal</p>
+        </div>
+        <!-- Phones Section -->
+        <div>
+            <i class="fas fa-headset icon"></i>
+            <h2>OUR PHONES</h2>
+            <p>Phone: +977 9804231198<br>Mobile: +977 9804231198</p>
+        </div>
+        <!-- Working Hours Section -->
+        <div>
+            <i class="fas fa-clock icon"></i>
+            <h2>WORKING HOURS</h2>
+            <p>Monday-Friday: 09:00 – 05:00<br>Saturday: 11:00 – 02:00<br>Sunday: Break</p>
+        </div>
+        <!-- Email Address Section -->
+        <div>
+            <i class="fas fa-envelope icon"></i>
+            <h2>E-MAIL ADDRESS</h2>
+            <p>aakkashsubedi@gmail.com</p>
+        </div>
+    </div>
+</div>
+<!-- -----Second Page Ends----- -->
+
+
+<section class="contact">
+    <div class="c-container">
+        <h2>Ready to Start?</h2>
+        <h1>Get in Touch</h1>
+        <p>Let's us know what's your question</p>
+        <form>
+            <div class="input-group">
+                <input placeholder="Name" required type="text">
+                <input placeholder="Email" required type="email">
             </div>
-            <!-- Phones Section -->
+            <textarea placeholder="Tell me about your project..." required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+        <div class="info">
             <div>
-                <i class="fas fa-headset icon"></i>
-                <h2>OUR PHONES</h2>
-                <p>Phone: +977 9804231198<br>Mobile: +977 9804231198</p>
-            </div>
-            <!-- Working Hours Section -->
-            <div>
-                <i class="fas fa-clock icon"></i>
-                <h2>WORKING HOURS</h2>
-                <p>Monday-Friday: 09:00 – 05:00<br>Saturday: 11:00 – 02:00<br>Sunday: Break</p>
-            </div>
-            <!-- Email Address Section -->
-            <div>
-                <i class="fas fa-envelope icon"></i>
-                <h2>E-MAIL ADDRESS</h2>
+                <p>Email</p>
                 <p>aakkashsubedi@gmail.com</p>
+            </div>
+            <div>
+                <p>Location</p>
+                <p>Worldwide</p>
+            </div>
+            <div>
+                <p>Response Time</p>
+                <p>2-8 hours</p>
             </div>
         </div>
     </div>
-    <!-- -----Second Page Ends----- -->
+</section>
 
 
-    <section class="contact">
-        <div class="c-container">
-            <h2>Ready to Start?</h2>
-            <h1>Get in Touch</h1>
-            <p>Let's us know what's your question</p>
-            <form>
-                <div class="input-group">
-                    <input placeholder="Name" type="text" required>
-                    <input placeholder="Email" type="email" required>
-                </div>
-                <textarea placeholder="Tell me about your project..." required></textarea>
-                <button type="submit">Send Message</button>
+<footer class="footer">
+    <div class="footer-container">
+        <!-- About Us -->
+        <div class="footer-section">
+            <h3>About Us</h3>
+            <p>Aaksh Store is a one-stop shop for high-quality, stylish, and affordable products. Whether you're
+                looking for the latest trends or everyday essentials, your store ensures satisfaction with premium
+                selections and hassle-free returns.</p>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-section">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="feature.html">Features</a></li>
+
+            </ul>
+        </div>
+
+        <!-- Customer Service -->
+        <div class="footer-section">
+            <h3>Customer Service</h3>
+            <ul>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="#">Shipping & Returns</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms & Conditions</a></li>
+            </ul>
+        </div>
+
+        <!-- Subscribe Section -->
+        <div class="footer-section subscribe">
+            <h3>Subscribe to Our Newsletter</h3>
+            <p>Get updates on new arrivals and special offers.</p>
+            <form class="subscribe-form">
+                <input placeholder="Enter your email" required type="email">
+                <button type="submit">Subscribe</button>
             </form>
-            <div class="info">
-                <div>
-                    <p>Email</p>
-                    <p>aakkashsubedi@gmail.com</p>
-                </div>
-                <div>
-                    <p>Location</p>
-                    <p>Worldwide</p>
-                </div>
-                <div>
-                    <p>Response Time</p>
-                    <p>2-8 hours</p>
-                </div>
-            </div>
         </div>
-    </section>
+    </div>
 
+    <!-- Social Media -->
+    <div class="social-media">
+        <a href="https://www.facebook.com/aakashsubedi11"><i class="fab fa-facebook"></i></a>
+        <a href="https://www.linkedin.com/in/aakashsubedi/"><i class="fab fa-linkedin"></i></a>
+        <a href="https://www.instagram.com/aakashsubedi_/"><i class="fab fa-instagram"></i></a>
+        <a href="https://github.com/aakashsubedi"><i class="fab fa-github"></i></a>
+    </div>
+    <!-- Copyright Section -->
+</footer>
+<footer class="footer-buttom">
 
-
-    <footer class="footer">
-        <div class="footer-container">
-            <!-- About Us -->
-            <div class="footer-section">
-                <h3>About Us</h3>
-                <p>Aaksh Store is a one-stop shop for high-quality, stylish, and affordable products. Whether you're
-                    looking for the latest trends or everyday essentials, your store ensures satisfaction with premium
-                    selections and hassle-free returns.</p>
-            </div>
-
-            <!-- Quick Links -->
-            <div class="footer-section">
-                <h3>Quick Links</h3>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="shop.html">Shop</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="blog.html">Blog</a></li>
-                    <li><a href="feature.html">Features</a></li>
-
-                </ul>
-            </div>
-
-            <!-- Customer Service -->
-            <div class="footer-section">
-                <h3>Customer Service</h3>
-                <ul>
-                    <li><a href="contact.html">Contact</a></li>
-                    <li><a href="#">Shipping & Returns</a></li>
-                    <li><a href="#">Privacy Policy</a></li>
-                    <li><a href="#">Terms & Conditions</a></li>
-                </ul>
-            </div>
-
-            <!-- Subscribe Section -->
-            <div class="footer-section subscribe">
-                <h3>Subscribe to Our Newsletter</h3>
-                <p>Get updates on new arrivals and special offers.</p>
-                <form class="subscribe-form">
-                    <input type="email" placeholder="Enter your email" required>
-                    <button type="submit">Subscribe</button>
-                </form>
-            </div>
+    <div class="buttom-footercontainer">
+        <div class="copyright">
+            &copy; 2025 Aakash Subedi. All rights reserved.
         </div>
-
-        <!-- Social Media -->
-        <div class="social-media">
-            <a href="https://www.facebook.com/aakashsubedi11"><i class="fab fa-facebook"></i></a>
-            <a href="https://www.linkedin.com/in/aakashsubedi/"><i class="fab fa-linkedin"></i></a>
-            <a href="https://www.instagram.com/aakashsubedi_/"><i class="fab fa-instagram"></i></a>
-            <a href="https://github.com/aakashsubedi"><i class="fab fa-github"></i></a>
-        </div>
-        <!-- Copyright Section -->
-    </footer>
-    <footer class="footer-buttom">
-
-        <div class="buttom-footercontainer">
-            <div class="copyright">
-                &copy; 2025 Aakash Subedi. All rights reserved.
-            </div>
-        </div>
-    </footer>
-
-
-
+    </div>
+</footer>
 
 
 </body>
